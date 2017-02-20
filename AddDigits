@@ -1,2 +1,23 @@
 # Practice Leetcode 258
 # Add digits of one number till single digit
+
+def add_digits(num):
+	#temp = 0
+	if num < 10: 
+		return num
+	while num >= 10:
+		temp = 0
+		while num > 0:
+			temp += num%10
+			num = num/10
+		num = temp
+		#print "Num is %r now" %num
+	return num
+
+#assert add_digits(19) == 1
+#assert add_digits(5) == 5
+	
+print "Say a number"
+input_num = raw_input()
+
+print add_digits(int(input_num))
