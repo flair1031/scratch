@@ -11,13 +11,13 @@ def add_digits(num):
 			temp += num%10
 			num = num/10
 		num = temp
-		#print "Num is %r now" %num
+		print "Num is %r now" %num
 	return num
 
 #assert add_digits(19) == 1
 #assert add_digits(5) == 5
-	
-print "Say a number"
-input_num = raw_input()
-
-print add_digits(int(input_num))
+try:	
+	print "Say a number"
+	print add_digits(int(raw_input()))
+except ValueError:
+	print "You said an invalid number! Try again..."
